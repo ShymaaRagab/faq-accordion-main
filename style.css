@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  background-color: hsl(275, 100%, 97%);
+  background-image: url("./assets/images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto; /* or 'cover' */
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100dvh;
+}
+
+article {
+  background-color: #fff;
+  border-radius: 15px;
+  max-width: 550px;
+  padding: 20px;
+}
+
+.head{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+h1{
+  font-size: 35px;
+  margin: 20px 0;
+}
+
+.question{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: hsl(292, 42%, 14%);
+  font-weight: 600;
+  transition: all ease 0.5ms;
+  cursor: pointer;
+}
+
+.question:hover{
+  color: #ad28eb;
+}
+
+.answer p{
+  font-size: 14px;
+  color: hsl(292, 16%, 49%);
+  margin: 10px 0;
+  display: none;
+}
+
+.question-container{
+  position: relative;
+  margin: 20px 0;
+}
+
+.question-container::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-top: 0.1px solid hsl(275, 100%, 97%);
+  bottom: -12px;
+}
+
+.active{
+  display: inline !important;
+}
